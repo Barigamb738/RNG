@@ -8,8 +8,18 @@ namespace _2hourRNG
     {
         static void Main(string[] args)
         {
-            for(double i = 0; i <= 100; i++)
-                Console.WriteLine(Random.Float(-10, 10));
+            Console.WriteLine("How much numbers should be generated?");
+            double a = double.Parse(Console.ReadLine());
+            Console.Clear();
+            Console.WriteLine("What is the minimum?");
+            int min = int.Parse(Console.ReadLine());
+            Console.Clear();
+            Console.WriteLine("What is the maximum?");
+            int max = int.Parse(Console.ReadLine());
+            Console.Clear();
+            for (double i = 0; i <= a; i++)
+                Console.WriteLine(Random.Int(min, max));
+            Console.ReadKey();
         }
     }
 }
